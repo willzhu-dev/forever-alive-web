@@ -1,31 +1,30 @@
-export default function ResetPasswordPage() {
+'use client'
+
+import { useEffect } from 'react'
+
+export default function CallbackPage() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+
+    const code = params.get('code')
+
+    if (code) {
+      window.location.href = `/reset-password?code=${code}`
+    } else {
+      window.location.href = '/'
+    }
+  }, [])
+
   return (
     <main
       style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
-      <div>
-        <h1>Reset Password</h1>
-
-        <input
-          type="password"
-          placeholder="New Password"
-          style={{
-            padding: "10px",
-            width: "300px",
-            display: "block",
-            marginBottom: "10px",
-          }}
-        />
-
-        <button>
-          Update Password
-        </button>
-      </div>
+      <p>Loading...</p>
     </main>
   )
 }

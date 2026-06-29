@@ -1,97 +1,11 @@
-'use client'
+import { createClient } from '@supabase/supabase-js'
 
-import { useEffect, useState } from 'react'
-import { supabase } from '@/lib/supabase'
+const supabaseUrl = https://cpistifrzgzijryslmto.supabase.co
+const supabaseAnonKey = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwaXN0aWZyemd6aWpyeXNsbXRvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE2NzI1NDcsImV4cCI6MjA5NzI0ODU0N30.VUtclzPX9P_d7Hdzr_-EFYT8TcIadTOrwIIohQP3Tf0
 
-export default function ResetPasswordPage() {
+const supabase = createClient(
+  supabaseUrl,
+  supabaseAnonKey
+)
 
-  const [password, setPassword] = useState('')
-  const [message, setMessage] = useState('')
-  const [loading, setLoading] = useState(false)
-
-  useEffect(() => {
-
-    const exchangeCode = async () => {
-
-      const params = new URLSearchParams(window.location.search)
-
-      const code = params.get('code')
-
-      if (!code) return
-
-      const { error } =
-        await supabase.auth.exchangeCodeForSession(code)
-
-      if (error) {
-        setMessage('链接已失效')
-      }
-    }
-
-    exchangeCode()
-
-  }, [])
-
-  async function updatePassword() {
-
-    setLoading(true)
-
-    const { error } =
-      await supabase.auth.updateUser({
-        password
-      })
-
-    if (error) {
-      setMessage(error.message)
-    } else {
-      setMessage('密码修改成功')
-    }
-
-    setLoading(false)
-  }
-
-  return (
-    <main
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}
-    >
-      <div
-        style={{
-          width: 400
-        }}
-      >
-
-        <h1>Reset Password</h1>
-
-        <input
-          type="password"
-          placeholder="New Password"
-          value={password}
-          onChange={(e)=>setPassword(e.target.value)}
-          style={{
-            width:'100%',
-            padding:'12px',
-            marginTop:'20px'
-          }}
-        />
-
-        <button
-          onClick={updatePassword}
-          style={{
-            marginTop:'20px',
-            width:'100%',
-            padding:'12px'
-          }}
-        >
-          {loading ? 'Updating...' : 'Update Password'}
-        </button>
-
-        <p>{message}</p>
-
-      </div>
-    </main>
-  )
-}
+export default supabase
