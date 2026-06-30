@@ -1,26 +1,302 @@
 @import "tailwindcss";
 
+/* ==========================================
+   Forever Alive Design System
+========================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Colors */
+  --background: #fffdfd;
+  --foreground: #222222;
+
+  --primary: #ff6fa9;
+  --primary-light: #ffd7e8;
+
+  --secondary: #ffeef5;
+
+  --border: rgba(255,255,255,.45);
+
+  --glass: rgba(255,255,255,.55);
+
+  --text-light: #666;
+
+  --shadow:
+    0 10px 40px rgba(255,111,169,.12);
+
+  --radius: 24px;
+
+  --max-width: 1200px;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ==========================================
+   Base
+========================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+body{
+
+  background:var(--background);
+
+  color:var(--foreground);
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "Segoe UI",
+    sans-serif;
+
+  overflow-x:hidden;
+
+}
+
+/* ==========================================
+   Typography
+========================================== */
+
+h1{
+
+  font-size:4rem;
+
+  font-weight:700;
+
+  line-height:1.1;
+
+}
+
+h2{
+
+  font-size:3rem;
+
+  font-weight:700;
+
+}
+
+h3{
+
+  font-size:2rem;
+
+  font-weight:600;
+
+}
+
+p{
+
+  color:var(--text-light);
+
+  line-height:1.8;
+
+  font-size:18px;
+
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.container{
+
+  width:min(1200px,92%);
+
+  margin:auto;
+
+}
+
+section{
+
+  padding:120px 0;
+
+}
+
+/* ==========================================
+   Button
+========================================== */
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:16px 34px;
+
+  border-radius:999px;
+
+  background:var(--primary);
+
+  color:white;
+
+  font-weight:600;
+
+  transition:.3s;
+
+  box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+  transform:translateY(-3px);
+
+  opacity:.95;
+
+}
+
+/* ==========================================
+   Glass Card
+========================================== */
+
+.glass{
+
+  background:var(--glass);
+
+  backdrop-filter:blur(30px);
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+
+}
+
+/* ==========================================
+   Bubble Background
+========================================== */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-2;
+
+  background:
+
+    radial-gradient(circle at 20% 20%,
+      rgba(255,170,200,.30),
+      transparent 18%),
+
+    radial-gradient(circle at 80% 25%,
+      rgba(255,200,230,.25),
+      transparent 18%),
+
+    radial-gradient(circle at 70% 70%,
+      rgba(255,160,210,.20),
+      transparent 20%),
+
+    radial-gradient(circle at 25% 75%,
+      rgba(255,220,235,.28),
+      transparent 18%);
+
+}
+
+/* ==========================================
+   Selection
+========================================== */
+
+::selection{
+
+  background:#ffbfd7;
+
+  color:#222;
+
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar{
+
+  width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:#ffb4d0;
+
+  border-radius:999px;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:768px){
+
+  h1{
+
+    font-size:2.6rem;
+
   }
+
+  h2{
+
+    font-size:2rem;
+
+  }
+
+  h3{
+
+    font-size:1.5rem;
+
+  }
+
+  section{
+
+    padding:80px 0;
+
+  }
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* ==========================================
+   Links
+========================================== */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+header nav {
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   Main
+========================================== */
+
+/* 给固定 Header 留出空间 */
+main {
+  padding-top: 110px;
 }
