@@ -1,30 +1,22 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import WhySection from "@/components/WhySection";
-import FeaturesSection from "@/components/FeaturesSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import FaqSection from "@/components/FaqSection";
-import DownloadSection from "@/components/DownloadSection";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+import Hero from "@/components/sections/Hero";
+import WhySection from "@/components/sections/WhySection";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import FaqSection from "@/components/sections/FaqSection";
+import DownloadSection from "@/components/sections/DownloadSection";
 
 export default function HomePage() {
   return (
     <>
-      <Navbar />
-
       <Hero />
-
       <WhySection />
-
       <FeaturesSection />
-
       <HowItWorksSection />
-
       <FaqSection />
-
       <DownloadSection />
-
-      <Footer />
     </>
   );
 }
