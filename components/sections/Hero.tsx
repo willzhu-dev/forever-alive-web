@@ -1,4 +1,4 @@
-import PhoneMockup from "./PhoneMockup";
+import PhoneMockup from "@/components/common/PhoneMockup";
 
 export default function Hero() {
   return (
