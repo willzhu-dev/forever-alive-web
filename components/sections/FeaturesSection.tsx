@@ -1,14 +1,13 @@
 export default function FeaturesSection() {
   return (
-    <section className="section bg-pink-50/40">
-      <div className="container">
-
+    <section className="page-section bg-pink-50/40">
+      <div className="page-container">
         <div className="section-header">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
             Everything you need to preserve your legacy
           </h2>
 
-          <p className="mt-4 text-lg text-gray-500">
+          <p className="text-lg text-gray-500">
             Beautifully designed to help you leave love, not regrets.
           </p>
         </div>
@@ -19,21 +18,18 @@ export default function FeaturesSection() {
               key={feature.title}
               className="rounded-3xl bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="mb-6 text-5xl">
-                {feature.icon}
-              </div>
+              <div className="mb-6 text-5xl">{feature.icon}</div>
 
               <h3 className="text-xl font-semibold">
                 {feature.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-gray-500">
+              <p className="mt-4 text-base leading-7 text-gray-500">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

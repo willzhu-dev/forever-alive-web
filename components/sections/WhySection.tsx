@@ -1,7 +1,7 @@
 export default function WhySection() {
   return (
-    <section className="section bg-white">
-      <div className="container">
+    <section className="page-section bg-white">
+      <div className="page-container">
         <div className="section-header">
           <span className="inline-flex rounded-full bg-pink-100 px-4 py-2 text-sm font-medium text-pink-600">
             Why Forever Alive
