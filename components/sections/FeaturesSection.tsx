@@ -1,3 +1,30 @@
+const features = [
+  {
+    title: "Letters",
+    description:
+      "Write meaningful letters that can be delivered when the time is right.",
+    icon: "💌",
+  },
+  {
+    title: "Voice Messages",
+    description:
+      "Let your loved ones hear your voice whenever they need comfort.",
+    icon: "🎙️",
+  },
+  {
+    title: "Videos",
+    description:
+      "Record precious moments that will never fade away.",
+    icon: "🎦",
+  },
+  {
+    title: "Memories",
+    description:
+      "Keep your favorite photos and stories together in one safe place.",
+    icon: "📷",
+  },
+];
+
 export default function FeaturesSection() {
   return (
     <section className="page-section bg-pink-50/40">
@@ -20,7 +47,7 @@ export default function FeaturesSection() {
             >
               <div className="mb-6 text-5xl">{feature.icon}</div>
 
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold text-gray-900">
                 {feature.title}
               </h3>
 
