@@ -519,3 +519,70 @@ main {
   }
 
 }
+
+/* =========================
+   Global Page Layout
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* 所有 section 统一使用这个容器 */
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 所有 section 统一上下间距 */
+.section {
+  width: 100%;
+  padding: 96px 0;
+}
+
+/* section 标题区域统一居中 */
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-header h2 {
+  margin: 0 0 12px;
+}
+
+.section-header p {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* 平板 */
+@media (max-width: 900px) {
+  .section {
+    padding: 72px 0;
+  }
+}
+
+/* 手机 */
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+}
+
