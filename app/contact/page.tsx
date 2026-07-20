@@ -10,7 +10,7 @@ export default function ContactPage() {
     <main className="bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-b from-pink-50 via-white to-white py-28">
-        <div className="container text-center">
+        <div className="page-container text-center">
           <span className="rounded-full bg-pink-100 px-4 py-2 text-sm font-medium text-pink-600">
             Contact
           </span>
@@ -28,8 +28,8 @@ export default function ContactPage() {
 
       {/* Contact */}
       <section className="py-24">
-        <div className="container">
-          <div className="grid gap-10 lg:grid-cols-2">
+        <div className="page-container">
+  <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
             {/* Left */}
             <div className="rounded-[32px] border border-pink-100 bg-white p-10 shadow-sm">
               <h2 className="text-3xl font-bold text-gray-900">
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
       {/* CTA */}
       <section className="bg-pink-50 py-24">
-        <div className="container text-center">
+        <div className="page-container text-center">
           <h2 className="text-4xl font-bold">
             Thank you for supporting Forever Alive.
           </h2>

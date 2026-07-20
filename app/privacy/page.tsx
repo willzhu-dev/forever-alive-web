@@ -10,7 +10,7 @@ export default function PrivacyPage() {
     <main className="bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-b from-pink-50 via-white to-white py-28">
-        <div className="container">
+        <div className="page-container">
           <div className="mx-auto max-w-4xl text-center">
             <span className="rounded-full bg-pink-100 px-4 py-2 text-sm font-medium text-pink-600">
               Privacy Policy
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
       {/* Content */}
       <section className="py-24">
-        <div className="container">
+        <div className="page-container">
           <div className="mx-auto max-w-4xl space-y-14 rounded-[32px] border border-pink-100 bg-white p-10 shadow-sm">
 
             <section>
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
 
       {/* Bottom CTA */}
       <section className="bg-pink-50 py-24">
-        <div className="container text-center">
+        <div className="page-container text-center">
           <h2 className="text-4xl font-bold text-gray-900">
             Your memories belong to you.
           </h2>
