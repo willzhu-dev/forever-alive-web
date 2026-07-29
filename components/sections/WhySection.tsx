@@ -12,7 +12,7 @@ const reasons = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="h-6 w-6"
+        className="h-5 w-5"
       >
         <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z" />
         <path d="M4 5.5v15" />
@@ -34,7 +34,7 @@ const reasons = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="h-6 w-6"
+        className="h-5 w-5"
       >
         <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
       </svg>
@@ -53,7 +53,7 @@ const reasons = [
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden="true"
-        className="h-6 w-6"
+        className="h-5 w-5"
       >
         <circle cx="7" cy="7" r="3" />
         <circle cx="17" cy="7" r="3" />
@@ -91,11 +91,11 @@ export default function WhySection() {
                 Why Forever Alive
               </span>
 
-              <h2 className="mt-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+              <h2 className="mt-5 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
                 Some things should never be forgotten.
               </h2>
 
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-500">
+              <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-gray-500">
                 Forever Alive helps you preserve the moments, stories, and
                 messages that carry your love forward to the people who matter
                 most.
@@ -109,11 +109,11 @@ export default function WhySection() {
                   key={reason.title}
                   className="group rounded-[26px] border border-white/80 bg-white/80 p-7 shadow-[0_12px_35px_rgba(31,41,55,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-pink-200 hover:shadow-[0_18px_45px_rgba(236,72,153,0.1)] sm:p-8"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-100 text-pink-600 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-pink-100 text-pink-600 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
                     {reason.icon}
                   </div>
 
-                  <h3 className="mt-6 text-xl font-semibold tracking-tight text-gray-900">
+                  <h3 className="mt-5 text-xl font-semibold tracking-tight text-gray-900">
                     {reason.title}
                   </h3>
 

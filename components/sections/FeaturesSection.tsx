@@ -153,7 +153,7 @@ export default function FeaturesSection() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-pink-100 bg-white p-8 shadow-[0_12px_40px_rgba(31,41,55,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-pink-200 hover:shadow-[0_20px_55px_rgba(236,72,153,0.12)] sm:p-9"
+              className="group relative flex min-h-[270px] flex-col overflow-hidden rounded-[28px] border border-pink-100 bg-white p-8 shadow-[0_12px_40px_rgba(31,41,55,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-pink-200 hover:shadow-[0_20px_55px_rgba(236,72,153,0.12)] sm:p-9"
             >
               {/* Decorative glow */}
               <div
@@ -176,10 +176,10 @@ export default function FeaturesSection() {
               </p>
 
               {/* Bottom detail */}
-              <div className="relative mt-auto pt-7">
+              <div className="relative mt-auto pt-8 pb-1">
                 <div className="h-px w-full bg-gradient-to-r from-pink-100 to-transparent" />
 
-                <div className="mt-5 flex items-center gap-2 text-sm font-medium text-pink-600">
+                <div className="mt-6 flex items-center gap-2 text-sm font-medium text-pink-600">
                   <span>Designed with care</span>
 
                   <svg
