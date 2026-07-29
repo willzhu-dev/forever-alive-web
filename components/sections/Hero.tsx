@@ -296,6 +296,7 @@ export default function Hero() {
             {/* Existing PhoneMockup */}
             <div className="relative z-10 origin-center scale-[0.9] sm:scale-100">
               <PhoneMockup />
+		</div>
             </div>
           </div>
         </div>
