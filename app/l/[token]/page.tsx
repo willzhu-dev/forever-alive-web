@@ -39,13 +39,15 @@ function formatDate(value: string): string {
 
 async function getLetter(token: string): Promise<Letter | null> {
   const response = await fetch(
-    `${SUPABASE_FUNCTION_URL}?token=${encodeURIComponent(token)}`,
+    SUPABASE_FUNCTION_URL,
     {
-      method: "GET",
+      method: "POST",
       cache: "no-store",
       headers: {
         Accept: "application/json",
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({ token }),
     },
   );
 
@@ -62,36 +64,16 @@ async function getLetter(token: string): Promise<Letter | null> {
   return result.letter ?? null;
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const { token } = await params;
-
-  try {
-    const letter = await getLetter(token);
-
-    return {
-      title: letter?.title
-        ? `${letter.title} | Forever Alive`
-        : "A Letter for You | Forever Alive",
-      description: "A private letter delivered through Forever Alive.",
-      robots: {
-        index: false,
-        follow: false,
-        nocache: true,
-      },
-    };
-  } catch {
-    return {
-      title: "A Letter for You | Forever Alive",
-      robots: {
-        index: false,
-        follow: false,
-        nocache: true,
-      },
-    };
-  }
-}
+export const metadata: Metadata = {
+  title: "A Letter for You | Forever Alive",
+  description: "A private letter delivered through Forever Alive.",
+  referrer: "no-referrer",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
+};
 
 export default async function LetterPage({ params }: PageProps) {
   const { token } = await params;
