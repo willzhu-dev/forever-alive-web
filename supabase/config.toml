@@ -428,4 +428,12 @@ entrypoint = "./functions/get-letter/index.ts"
 # For example, if you want to serve static HTML pages in your function:
 # static_files = [ "./functions/get-letter/*.html" ]
 
+[functions.delete-account]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/delete-account/index.ts"
 
+[functions.send-letter]
+enabled = true
+verify_jwt = true
+entrypoint = "./functions/send-letter/index.ts"

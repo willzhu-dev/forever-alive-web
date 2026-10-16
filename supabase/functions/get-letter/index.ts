@@ -76,7 +76,11 @@ Deno.serve(async (request: Request) => {
     const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     if (!supabaseUrl || !serviceRoleKey) {
       console.error("Missing Supabase environment variables");
-      return jsonResponse(request, { error: "Server configuration error" }, 500);
+      return jsonResponse(
+        request,
+        { error: "Server configuration error" },
+        500,
+      );
     }
 
     const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey, {
@@ -121,7 +125,7 @@ Deno.serve(async (request: Request) => {
       : null;
 
     const unavailable = !letter ||
-      letter.status !== "delivered" ||
+      !["active", "delivered"].includes(letter.status) ||
       letter.revoked_at !== null ||
       !Number.isFinite(availableAt) ||
       availableAt > now ||
