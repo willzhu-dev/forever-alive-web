@@ -7,7 +7,7 @@ export default function DownloadSection() {
   className="page-section scroll-mt-20 bg-white"
 >
       <div className="page-container">
-        <div className="relative overflow-hidden rounded-[36px] bg-gradient-to-br from-pink-500 via-rose-500 to-pink-600 px-6 py-14 shadow-[0_30px_80px_rgba(236,72,153,0.25)] sm:px-10 lg:px-16 lg:py-20">
+        <div className="download-panel relative overflow-hidden rounded-[36px] bg-gradient-to-br from-pink-500 via-rose-500 to-pink-600 px-6 py-14 shadow-[0_30px_80px_rgba(236,72,153,0.25)] sm:px-10 lg:px-16 lg:py-20">
           {/* Decorative background */}
           <div
             aria-hidden="true"
@@ -26,7 +26,7 @@ export default function DownloadSection() {
 
           <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             {/* Content */}
-            <div className="max-w-2xl text-center lg:text-left">
+            <div className="download-copy max-w-2xl text-center lg:text-left">
               <span className="inline-flex rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
                 Forever Alive App
               </span>
@@ -42,17 +42,17 @@ export default function DownloadSection() {
               </p>
 
               {/* CTA buttons */}
-              <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
+              <div className="download-actions mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                 <Link
                   href="/download"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full bg-white px-8 text-base font-semibold text-pink-600 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-50 hover:shadow-xl"
+                  className="download-button download-button-primary inline-flex min-h-14 items-center justify-center rounded-full bg-white px-8 text-base font-semibold text-pink-600 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-50 hover:shadow-xl"
                 >
                   Download the App
                 </Link>
 
                 <Link
                   href="/features"
-                  className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+                  className="download-button download-button-secondary inline-flex min-h-14 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/20"
                 >
                   Explore Features
                 </Link>

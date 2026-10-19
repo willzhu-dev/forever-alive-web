@@ -153,7 +153,7 @@ export default function FeaturesSection() {
           {features.map((feature) => (
             <article
               key={feature.title}
-              className="group relative flex min-h-[270px] flex-col overflow-hidden rounded-[28px] border border-pink-100 bg-white p-8 shadow-[0_12px_40px_rgba(31,41,55,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-pink-200 hover:shadow-[0_20px_55px_rgba(236,72,153,0.12)] sm:p-9"
+              className="feature-card group relative flex min-h-[270px] flex-col overflow-hidden rounded-[28px] border border-pink-100 bg-white p-8 shadow-[0_12px_40px_rgba(31,41,55,0.05)] transition-all duration-300 hover:-translate-y-1.5 hover:border-pink-200 hover:shadow-[0_20px_55px_rgba(236,72,153,0.12)] sm:p-9"
             >
               {/* Decorative glow */}
               <div

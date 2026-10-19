@@ -67,7 +67,7 @@ export default function FaqSection() {
         </div>
 
         {/* FAQ list */}
-        <div className="mx-auto mt-16 max-w-3xl space-y-4">
+        <div className="faq-list mx-auto mt-16 max-w-3xl space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             const answerId = `faq-answer-${index}`;
@@ -76,7 +76,7 @@ export default function FaqSection() {
             return (
               <div
                 key={faq.question}
-                className={`overflow-hidden rounded-2xl border bg-white transition-all duration-300 ${
+                className={`faq-item overflow-hidden rounded-2xl border bg-white transition-all duration-300 ${
                   isOpen
                     ? "border-pink-200 shadow-[0_14px_40px_rgba(236,72,153,0.09)]"
                     : "border-gray-100 shadow-sm hover:border-pink-100"
@@ -88,7 +88,7 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                   aria-controls={answerId}
                   onClick={() => toggleFaq(index)}
-                  className="flex w-full items-center justify-between gap-6 px-6 py-6 text-left sm:px-8"
+                  className="faq-question flex w-full items-center justify-between gap-6 px-6 py-6 text-left sm:px-8"
                 >
                   <span className="text-lg font-semibold text-gray-900">
                     {faq.question}
@@ -127,7 +127,7 @@ export default function FaqSection() {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-7 pr-16 text-base leading-7 text-gray-500 sm:px-8 sm:pr-20">
+                    <p className="faq-answer px-6 pb-7 pr-16 text-base leading-7 text-gray-500 sm:px-8 sm:pr-20">
                       {faq.answer}
                     </p>
                   </div>

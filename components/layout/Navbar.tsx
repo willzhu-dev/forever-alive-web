@@ -70,7 +70,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 lg:flex">
             <Link
               href="#download"
-              className="inline-flex min-h-11 items-center justify-center rounded-full bg-pink-500 px-6 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(236,72,153,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-[0_14px_34px_rgba(236,72,153,0.32)]"
+              className="nav-download-button inline-flex min-h-11 items-center justify-center rounded-full bg-pink-500 px-6 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(236,72,153,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-[0_14px_34px_rgba(236,72,153,0.32)]"
             >
               Download App
             </Link>

@@ -500,6 +500,53 @@ body {
   line-height: 1.7;
 }
 
+/* Critical spacing fallbacks.
+   These keep the primary marketing components readable even if utility CSS is
+   delayed or a cached deployment serves an incomplete spacing layer. */
+.feature-card {
+  padding: 2rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-question {
+  min-height: 76px;
+  padding: 1.25rem 1.5rem;
+}
+
+.faq-answer {
+  padding: 0 4rem 1.5rem 1.5rem;
+}
+
+.download-panel {
+  padding: 4.5rem clamp(2rem, 5vw, 5rem);
+}
+
+.download-copy {
+  padding-inline: 0.25rem;
+}
+
+.download-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.download-button,
+.nav-download-button {
+  min-height: 3.5rem;
+  padding: 0.875rem 2rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.nav-download-button {
+  min-height: 2.75rem;
+  padding: 0.625rem 1.5rem;
+}
+
 @media (max-width: 900px) {
 
   .page-section {
@@ -516,6 +563,35 @@ body {
 
   .page-section {
     padding-block: 56px;
+  }
+
+  .feature-card {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+
+  .faq-question {
+    gap: 1rem;
+    padding: 1.125rem 1.25rem;
+  }
+
+  .faq-answer {
+    padding: 0 3.75rem 1.25rem 1.25rem;
+  }
+
+  .download-panel {
+    border-radius: 1.75rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .download-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .download-button {
+    width: 100%;
+    max-width: 22rem;
   }
 
 }
