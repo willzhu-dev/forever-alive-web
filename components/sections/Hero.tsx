@@ -121,7 +121,7 @@ export default function Hero() {
             <div className="mt-9 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-center">
               <Link
                 href="#download"
-                className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-pink-500 px-8 text-base font-semibold text-white shadow-[0_14px_35px_rgba(236,72,153,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-[0_18px_45px_rgba(236,72,153,0.38)]"
+                className="hero-download-button group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-pink-500 px-8 text-base font-semibold text-white shadow-[0_14px_35px_rgba(236,72,153,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-pink-600 hover:shadow-[0_18px_45px_rgba(236,72,153,0.38)]"
               >
                 Download the App
 

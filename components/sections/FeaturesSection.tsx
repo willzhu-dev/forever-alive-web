@@ -134,7 +134,7 @@ export default function FeaturesSection() {
       <div className="page-container">
         {/* Heading */}
         <div className="section-header">
-          <span className="inline-flex rounded-full border border-pink-200 bg-white px-4 py-2 text-sm font-medium text-pink-600 shadow-sm">
+          <span className="section-eyebrow inline-flex rounded-full border border-pink-200 bg-white px-4 py-2 text-sm font-medium text-pink-600 shadow-sm">
             Everything You Need
           </span>
 

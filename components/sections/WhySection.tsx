@@ -107,7 +107,7 @@ export default function WhySection() {
               {reasons.map((reason) => (
                 <article
                   key={reason.title}
-                  className="group rounded-[26px] border border-white/80 bg-white/80 p-7 shadow-[0_12px_35px_rgba(31,41,55,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-pink-200 hover:shadow-[0_18px_45px_rgba(236,72,153,0.1)] sm:p-8"
+                  className="reason-card group rounded-[26px] border border-white/80 bg-white/80 p-7 shadow-[0_12px_35px_rgba(31,41,55,0.05)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-pink-200 hover:shadow-[0_18px_45px_rgba(236,72,153,0.1)] sm:p-8"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-pink-100 text-pink-600 transition-all duration-300 group-hover:bg-pink-500 group-hover:text-white">
                     {reason.icon}

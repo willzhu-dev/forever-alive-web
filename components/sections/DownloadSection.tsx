@@ -27,7 +27,7 @@ export default function DownloadSection() {
           <div className="relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
             {/* Content */}
             <div className="download-copy max-w-2xl text-center lg:text-left">
-              <span className="inline-flex rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+              <span className="download-eyebrow inline-flex rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
                 Forever Alive App
               </span>
 
@@ -205,7 +205,7 @@ export default function DownloadSection() {
               </div>
 
               {/* Floating card */}
-              <div className="absolute -left-2 bottom-16 hidden rounded-2xl border border-white/40 bg-white/90 p-4 shadow-xl backdrop-blur-md sm:block lg:-left-10">
+              <div className="memory-toast absolute -left-2 bottom-16 hidden rounded-2xl border border-white/40 bg-white/90 p-4 shadow-xl backdrop-blur-md sm:block lg:-left-10">
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-100">
                     ❤️

@@ -507,6 +507,29 @@ body {
   padding: 2rem;
 }
 
+.reason-card {
+  padding: 2rem;
+}
+
+.section-eyebrow,
+.download-eyebrow {
+  padding: 0.5rem 1rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.memory-toast {
+  min-width: 14.25rem;
+  padding: 1rem 1.125rem;
+}
+
+.hero-download-button {
+  min-height: 3.5rem;
+  padding: 0.875rem 2rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
 .faq-list {
   display: grid;
   gap: 1rem;
@@ -568,6 +591,20 @@ body {
   .feature-card {
     min-height: 0;
     padding: 1.5rem;
+  }
+
+  .reason-card {
+    padding: 1.5rem;
+  }
+
+  .section-eyebrow,
+  .download-eyebrow {
+    padding: 0.5rem 0.875rem;
+  }
+
+  .hero-download-button {
+    width: 100%;
+    padding-inline: 1.5rem;
   }
 
   .faq-question {
