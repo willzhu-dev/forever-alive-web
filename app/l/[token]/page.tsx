@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import RecipientSafetyActions from "./RecipientSafetyActions";
 
 type PageProps = {
   params: Promise<{
@@ -99,13 +101,13 @@ export default async function LetterPage({ params }: PageProps) {
 
       <article className="letter-shell">
         <header className="brand-header">
-          <a className="brand" href="/" aria-label="Forever Alive home">
+          <Link className="brand" href="/" aria-label="Forever Alive home">
             <span className="brand-mark" aria-hidden="true">
               ∞
             </span>
 
             <span>Forever Alive</span>
-          </a>
+          </Link>
         </header>
 
         <section className="letter-card">
@@ -152,6 +154,8 @@ export default async function LetterPage({ params }: PageProps) {
         <p className="privacy-note">
           This private letter is available only through its secure link.
         </p>
+
+        <RecipientSafetyActions token={token} />
       </article>
     </main>
   );

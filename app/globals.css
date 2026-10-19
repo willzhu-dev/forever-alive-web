@@ -739,6 +739,87 @@ body {
   text-align: center;
 }
 
+.recipient-safety {
+  margin: 26px auto 0;
+  padding: 22px;
+  border: 1px solid rgba(67, 57, 46, 0.13);
+  border-radius: 14px;
+  background: rgba(255, 253, 248, 0.78);
+  color: #4b4540;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.recipient-safety h2 {
+  margin: 0 0 6px;
+  color: #292622;
+  font-size: 17px;
+}
+
+.recipient-safety p {
+  margin: 0;
+}
+
+.recipient-safety form,
+.recipient-safety label {
+  display: grid;
+  gap: 8px;
+}
+
+.recipient-safety form {
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.recipient-safety select,
+.recipient-safety textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid rgba(67, 57, 46, 0.22);
+  border-radius: 10px;
+  background: #fff;
+  color: #292622;
+  font: inherit;
+}
+
+.recipient-safety-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.recipient-safety button {
+  padding: 10px 14px;
+  border: 1px solid rgba(67, 57, 46, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: #5d5147;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+
+.recipient-safety button:hover {
+  background: #f8f2eb;
+}
+
+.recipient-safety button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.recipient-safety .recipient-safety-primary {
+  border-color: #7c2d12;
+  background: #7c2d12;
+  color: #fff;
+}
+
+.recipient-safety-error {
+  color: #b91c1c;
+}
+
 .ambient {
   position: absolute;
   border-radius: 999px;

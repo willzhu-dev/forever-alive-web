@@ -437,3 +437,9 @@ entrypoint = "./functions/delete-account/index.ts"
 enabled = true
 verify_jwt = true
 entrypoint = "./functions/send-letter/index.ts"
+
+[functions.report-letter]
+enabled = true
+verify_jwt = false
+import_map = "./functions/report-letter/deno.json"
+entrypoint = "./functions/report-letter/index.ts"

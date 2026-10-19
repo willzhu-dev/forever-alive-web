@@ -133,6 +133,16 @@ async function sendWithResend(
   return result.id;
 }
 
+async function sha256Hex(value: string): Promise<string> {
+  const digest = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(value),
+  );
+  return Array.from(new Uint8Array(digest))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
 Deno.serve(async (request: Request) => {
   if (request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: corsHeaders });
@@ -254,6 +264,33 @@ Deno.serve(async (request: Request) => {
       if (messageError) throw messageError;
 
       try {
+        const recipient = message.recipient_email?.trim().toLowerCase();
+        if (recipient) {
+          const recipientHash = await sha256Hex(recipient);
+          const { data: suppression, error: suppressionError } = await admin
+            .from("recipient_suppressions")
+            .select("id")
+            .eq("sender_user_id", message.user_id)
+            .eq("recipient_hash", recipientHash)
+            .maybeSingle();
+          if (suppressionError) throw suppressionError;
+
+          if (suppression) {
+            const { error: updateError } = await admin
+              .from("messages")
+              .update({
+                delivery_claimed_at: null,
+                delivery_suppressed_at: new Date().toISOString(),
+                revoked_at: new Date().toISOString(),
+                delivery_last_error: "Recipient stopped future messages",
+              })
+              .eq("id", message.id);
+            if (updateError) throw updateError;
+            results.push({ messageId: message.id, status: "suppressed" });
+            continue;
+          }
+        }
+
         const providerID = await sendWithResend(
           resendAPIKey,
           resendFrom,
